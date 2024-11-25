@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cute Dognut - $CUNUT</title>
+    <link rel="icon"
+        href="https://raw.githubusercontent.com/cunut/img/refs/heads/main/53E4E390-3C4E-4EDF-A0DD-C9B158627648.PNG"
+        type="image/x-icon">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+</head>
+
+<style>
+    body {
+        margin: 0;
+        font-family: "Arial", sans-serif;
+        background-color: #1e1e2f;
+        color: #ffffff;
+        line-height: 1.6;
+    }
+
+    .container {
+        width: 90%;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    a {
+        color: #00ffa3;
+        text-decoration: none;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+    .hero {
+        text-align: center;
+        padding: 5rem 1rem;
+        background: linear-gradient(135deg, rgb(77, 44, 145), #1e1e2f);
+    }
+
+    .hero .logo {
+        max-width: 150px;
+        margin-bottom: 1rem;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+        margin: 0;
+    }
+
+    .hero p {
+        font-size: 1.25rem;
+        margin: 1rem 0;
+    }
+
+    .hero .btn {
+        display: inline-block;
+        padding: 0.75rem 1.5rem;
+        border-radius: 5px;
+        background: #00ffa3;
+        color: #1e1e2f;
+        font-weight: bold;
+        transition: background-color 0.3s;
+    }
+
+    .hero .btn:hover {
+        background: #33ffb5;
+    }
+
+    .features {
+        padding: 3rem 1rem;
+        background-color: #2a2d3e;
+        text-align: center;
+    }
+
+    .features h2 {
+        margin-bottom: 2rem;
+    }
+
+    .feature-grid {
+        display: flex;
+        gap: 2rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .feature-item {
+        background: #3b3f58;
+        padding: 2rem;
+        border-radius: 8px;
+        max-width: 300px;
+    }
+
+    .feature-item h3 {
+        margin-bottom: 1rem;
+        color: #00ffa3;
+    }
+
+    footer {
+        padding: 1rem 0;
+        background-color: #161622;
+        background-image: url("https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExZ2Z5cXdvd2N6ZnFmb292OGtzaTY0a3RsaGdodHYxNzRmNW1yc3gwciZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/NK5YRIKLpYFYTwdKWV/giphy.webp");
+        background-size: cover;
+        text-align: center;
+    }
+
+    footer .footer-gif {
+        max-height: 150px;
+        object-fit: contain;
+    }
+
+
+    #music-player {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background: rgba(0, 0, 0, 0.7);
+        border-radius: 50px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 1000;
+    }
+
+    #music-player button {
+        background: none;
+        border: none;
+        color: white;
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+    #music-player button:hover {
+        color: #00ffa3;
+    }
+
+    .social-media-icons {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 20px;
+    }
+
+    .social-icon {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+    }
+
+    .social-icon:hover {
+        background-color: #ddd;
+    }
+
+    .solscan {
+        background-image: url("https://avatars.githubusercontent.com/u/92743431?s=280&v=4");
+        background-size: cover;
+    }
+
+    .x {
+        background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/X_logo.jpg/800px-X_logo.jpg");
+        background-size: cover;
+    }
+
+    .telegram {
+        background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Telegram_logo.svg/512px-Telegram_logo.svg.png");
+        background-size: cover;
+    }
+
+    .pump {
+        background-image: url("https://miro.medium.com/v2/resize:fit:400/0*RwqGm887tStAjYXs.jpg");
+        background-size: cover;
+    }
+
+    .dexscanner {
+        background-image: url("https://images.seeklogo.com/logo-png/52/1/dex-screener-logo-png_seeklogo-527276.png");
+        background-size: cover;
+    }
+
+    .dexscanner {
+        background-image: url("https://images.seeklogo.com/logo-png/52/1/dex-screener-logo-png_seeklogo-527276.png");
+        background-size: cover;
+    }
+
+    .github {
+        background-image: url("https://pbs.twimg.com/profile_images/1633247750010830848/8zfRrYjA_400x400.png");
+        background-size: cover;
+    }
+
+    .notification {
+        display: none;
+        color: white;
+        border-radius: 5px;
+        margin-top: 10px;
+        font-size: 16px;
+    }
+
+    .copy-btn {
+        background-color: #00ffa3;
+        color: rgb(0, 0, 0);
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: bold;
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .copy-btn:hover {
+        background-color: #ffffff;
+    }
+</style>
+
+<body>
+
+    <header class="hero">
+        <div class="container">
+            <img src="https://raw.githubusercontent.com/cunut/img/refs/heads/main/5669135D-195C-42DD-8770-E0E79E4643D7.PNG"
+                alt="$CUNUT" class="logo">
+            <h2 id="greeting"></h2>
+            <p id="p-typing"></p>
+            <a href="#" class="btn btn-primary">BUY $CUNUT</a>
+        </div>
+        <div class="social-media-icons">
+            <a href="#" target="_blank" class="social-icon solscan"></a>
+            <a href="https://x.com/cunutsolana" target="_blank" class="social-icon x"></a>
+            <a href="https://t.me/cunutsolana" target="_blank" class="social-icon telegram"></a>
+            <a href="#" target="_blank" class="social-icon pump"></a>
+            <a href="#" target="_blank" class="social-icon dexscanner"></a>
+            <a href="https://github.com/cunut" target="_blank" class="social-icon github"></a>
+        </div>
+    </header>
+
+    <section id="features" class="features">
+        <div class="container">
+            <h2>Why $CUNUT ?</h2>
+            <div class="feature-grid">
+                <div class="feature-item">
+                    <h3>Trust Dev</h3>
+                    <p>
+                        The strongest reason we created this project is the overwhelming number of scam meme tokens
+                        involving "dumping" or "rug pulls."
+                        Many people are overly ambitious about getting rich quickly, leading them to risk all their
+                        money on meme tokens. <br> <br> To be honest,
+                        investing in meme tokens is akin to gambling, as there's a 99% chance the token you buy is a
+                        scam. However, if you're lucky, you might stumble upon hidden gems like $PNUT.
+                    </p>
+                </div>
+                <div class="feature-item">
+                    <h3>Hidden Gems</h3>
+                    <p>
+                        $PNUT is one of this year’s hidden gems. Many people might have missed it, or its price may
+                        already be too high by now.
+                        Don’t worry—$CUNUT aims to become the next hidden gem. You just need to trust us as developers,
+                        because in the world of crypto,
+                        especially with meme tokens, mutual trust and support are essential for a project to thrive and
+                        grow.
+                        <br> <br> It's okay to have doubts. You can start by investing a small amount, like $1, or
+                        simply observe
+                        the project's progress until you feel confident enough to invest.
+                    </p>
+                </div>
+                <div class="feature-item">
+                    <h3>Long Term Project</h3>
+                    <p>
+                        We are committed to creating a long-term project that continues to evolve over time, making
+                        $CUNUT truly unique.
+                        Why? Unlike many other meme tokens that are often abandoned by their developers, turning them
+                        into "trash tokens" designed only for pump-and-dump schemes,
+                        $CUNUT is built with the intention to last forever. <br> <br> We are here for the long term,
+                        striving to
+                        ensure this project thrives. In the future, we hope to see $CUNUT
+                        competing alongside other well-known tokens like Dogecoin, Shiba Inu, Pepe, and more.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <div id="music-player">
+        <button id="play-pause"><i class="fa fa-play"></i></button>
+    </div>
+
+    <footer>
+        <div class="contract-container">
+            <textarea id="contract-text" style="display: none;" readonly>
+              Coming Soon
+            </textarea>
+            <br>
+            <button class="copy-btn" onclick="copyContract()">COPY CONTRACT</button>
+            <div id="success-notification" class="notification">
+                Contract copied to clipboard successfully 🎉
+            </div>
+        </div>
+        <div class="container">
+            <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExZ2Z5cXdvd2N6ZnFmb292OGtzaTY0a3RsaGdodHYxNzRmNW1yc3gwciZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/NK5YRIKLpYFYTwdKWV/giphy.webp"
+                alt="Cuteness overload" class="footer-gif">
+            <p>© 2024 $CUNUT. Powered by Solana Blockchain.</p>
+        </div>
+    </footer>
+
+    <script>
+
+        const playPauseBtn = document.getElementById('play-pause');
+        const audio = new Audio('https://github.com/cunut/web/raw/main/PUMPIT.mp3');
+        let isPlaying = false;
+
+        playPauseBtn.addEventListener('click', () => {
+            if (isPlaying) {
+                audio.pause();
+                playPauseBtn.innerHTML = '<i class="fa fa-play"></i>';
+            } else {
+                audio.play();
+                playPauseBtn.innerHTML = '<i class="fa fa-pause"></i>';
+            }
+            isPlaying = !isPlaying;
+        });
+
+
+        audio.addEventListener('ended', () => {
+            playPauseBtn.innerHTML = '<i class="fa fa-play"></i>';
+            isPlaying = false;
+        });
+
+
+        function copyContract() {
+            var contractText = "Coming Soon";
+            navigator.clipboard.writeText(contractText).then(() => {
+
+                const notification = document.getElementById("success-notification");
+                notification.style.display = "block";
+                setTimeout(() => {
+                    notification.style.display = "none";
+                }, 2000);
+            }).catch(err => {
+                console.error("Failed to copy: ", err);
+            });
+        }
+
+
+        window.onload = function () {
+            const params = new URLSearchParams(window.location.search);
+            const name = params.get('name');
+            if (name) {
+                const greeting = document.getElementById('greeting');
+                if (greeting) {
+                    greeting.textContent = `Welcome, ${name} :)`;
+                }
+            }
+        };
+
+        const text = "Cute Dognut is a meme token build on the Solana blockchain. The name Cutedog is inspired by My Dog Pomeranian Spitz, a small dog with a fluffy white coat that makes it absolutely adorable.";
+        const typingTextElement = document.getElementById("p-typing");
+        let index = 0;
+
+        function typeText() {
+            if (index < text.length) {
+                typingTextElement.textContent += text.charAt(index);
+                index++;
+                setTimeout(typeText, 100);
+            } else {
+                setTimeout(() => {
+                    index = 0;
+                    typingTextElement.textContent = "";
+                    typeText();
+                }, 1000);
+            }
+        }
+        typeText();
+    </script>
+
+
+</body>
+
+</html>
